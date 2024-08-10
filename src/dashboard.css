@@ -1,0 +1,322 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.logo img {
+  width: 160px;
+  height: 110px;
+  margin-right: 10px;
+}
+
+.dashboard {
+  font-family: Arial, sans-serif;
+}
+
+.header1 {
+  position: relative;
+  height: 410px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.intro-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video is behind other content */
+}
+
+.header-content {
+  position: relative;
+  z-index: 1; /* Ensure this content is on top of the video */
+  color: black; /* Adjust the color to ensure readability */
+  text-align: center;
+  padding-top: 100px; /* Adjust padding as needed */
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.auth-buttons .login,
+.auth-buttons .register {
+  margin-left: 10px;
+  padding: 15px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.auth-buttons .login {
+  background-color: #fff;
+  color: #007bff;
+}
+
+.auth-buttons .register {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.main {
+  padding: 20px;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+.search-bar input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.search-bar .search-button {
+  padding: 10px 20px;
+  background-color:#007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-style:ridge;
+  box-shadow: black 1.5px 1.5px;
+  border-color: black black black black;
+}
+
+.search-bar .search-button:hover{
+  background-color: #ffffff;
+  color:black;
+  border-style: solid;
+  border-color: black black black black;
+}
+
+.promotion {
+  background-color: hwb(213 17% 5% / 0.769);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.promotion h3 {
+  margin-bottom: 10px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.categories button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.featured-companies {
+  padding: 20px;
+  text-align: center;
+}
+
+.featured-companies h3 {
+  margin-bottom: 20px;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.company-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.company-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.company-card img {
+  height: 80px;
+  padding-left: 190px;
+  margin-bottom: 10px;
+}
+
+.company-card .rating {
+  margin: 10px 0;
+}
+
+.company-card .rating span {
+  color: #777;
+}
+
+.view-jobs {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-all-companies {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #002aff;
+  color: #0015ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-all-companies:hover{
+  background-color: rgb(68, 111, 238);
+  color: white;
+}
+
+.explore-button{
+  border-radius: 10px;
+  height: 36px;
+  cursor: pointer;
+  box-shadow: 3px 4px;
+  
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.explore-button:hover{
+  background-color: #579fec;
+}
+
+/* Add this to your dashboard.css file */
+
+/* .footer {
+  background-color: #cfd3d4;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo img {
+  width: 160px;
+  height: 110px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-link-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link-column p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+} */
+
+/* Add sponsored companies section */
+
+.sponsored-companies {
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #b1dbed;
+}
+
+.sponsored-companies h3 {
+  margin-bottom: 20px;
+}
+
+.sponsored-company-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sponsored-company-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.sponsored-company-card img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.sponsored-company-card h4 {
+  margin: 10px 0;
+}
+
+.sponsored-company-card p {
+  color: #777;
+}

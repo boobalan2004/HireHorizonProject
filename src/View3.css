@@ -1,0 +1,122 @@
+.view1-container {
+    padding: 20px;
+}
+
+.content {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.banner {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    background-color:lightgray;
+}
+
+.company-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.company-logo3 {
+    height: 140px;
+    max-width: 200px; /* Increase the logo size */
+    margin-right: 20px;
+}
+
+.company-details {
+    flex: 1;
+}
+
+.tags span, .job-meta span {
+    margin-right: 10px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.followers {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.follow-btn {
+    margin-left: 20px;
+    padding: 7px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.job-info {
+    flex: 1;
+}
+
+.job-save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-logo3 {
+    height: 120px;
+    padding-top: 40px;
+    max-width: 200px; /* Increase the size of the job logo */
+    margin-bottom: 10px;
+}
+
+.job-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.save-btn, .apply-btn {
+    width: 85px; /* Optional: make buttons wider */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.apply-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.job-date {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #777;
+}
+.job-tags{
+    row-gap: 100px;
+}
+
+

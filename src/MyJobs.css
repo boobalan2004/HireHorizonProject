@@ -1,0 +1,70 @@
+.my-jobs-container {
+    margin: 20px;
+}
+
+.applications-list12 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.application-item12 {
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Reduced border radius */
+    padding: 20px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    background-color: #fff;
+}
+
+.job-header12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.job-title12 {
+    font-size: 16px; /* Reduced font size */
+    font-weight: bold;
+}
+
+.company-info12 {
+    text-align: right;
+}
+
+.company-name12 {
+    font-size: 14px; /* Reduced font size */
+    font-weight: bold;
+}
+
+.reviews12 {
+    color: #777;
+}
+
+.job-details12, .skills-required12, .additional-info12, .footer-info12 {
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.skills-required12 span, .additional-info12 span {
+    margin-left: 5px;
+}
+
+.footer-info12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-icons12 {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icons12 button {
+    margin-right: 10px; /* Gap between buttons */
+}
+
+.footer-icons12 span {
+    margin-left: 8px; /* Reduced margin */
+    cursor: pointer;
+    color: #0073b1;
+}

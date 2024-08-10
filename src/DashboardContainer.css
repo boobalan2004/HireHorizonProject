@@ -1,0 +1,46 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+}
+
+.main-content21 {
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard-stats, .dashboard-extra-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dashboard-extra-stats {
+  margin-top: 40px; /* Extra spacing between the two sections */
+}
+
+
+
+/* VacancyStatsChart.css */
+
+.vacancy-stats-chart {
+  margin-top: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Increased width */
+  height: auto; /* Adjusts height based on content */
+  max-width: 900px; /* Increased max-width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vacancy-stats-chart h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+

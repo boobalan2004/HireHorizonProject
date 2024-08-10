@@ -1,0 +1,39 @@
+/* UserQueries.css */
+
+.userQueries-container {
+    padding: 20px;
+  }
+  
+  .userQueries-title {
+    margin-bottom: 20px;
+  }
+  
+  .userQueries-list {
+    width: '100%';
+  }
+  
+  .userQueries-listItem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .userQueries-listItem:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .userQueries-button {
+    margin-top: 10px;
+  }
+  
+  .userQueries-dialog {
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .userQueries-dialogTitle {
+    margin-bottom: 20px;
+  }
+  

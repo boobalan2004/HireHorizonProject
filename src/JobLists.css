@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container2004 {
+    padding: 20px;
+}
+
+.header2004 {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header2004 p {
+    padding-left: 540px;
+}
+
+.header-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.header-button:hover {
+    background-color: #e0e0e0;
+}
+
+.job-list-container {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.job-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-row {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.job-cell {
+    flex: 1; /* Ensure each cell takes up equal space */
+    padding: 15px;
+    text-align: center; /* Center align text in headers */
+}
+
+.job-cell.id-cell {
+    flex: 0 0 50px;
+}
+
+.job-cell.name-cell {
+    flex: 0 0 150px;
+}
+
+.actions-cell {
+    flex: 0 0 px; /* Set a consistent width for action buttons */
+    text-align: center; /* Center align action buttons */
+}
+
+.apply-button, .view-resume-button {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.apply-button {
+    background-color: #4CAF50;
+}
+
+.apply-button:hover {
+    background-color: #45a049;
+}
+
+.view-resume-button {
+    background-color: #007bff;
+    margin-left: 5px; /* Add some space between buttons */
+}
+
+.view-resume-button:hover {
+    background-color: #0056b3;
+}

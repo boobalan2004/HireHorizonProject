@@ -1,0 +1,66 @@
+/* footer.css */
+.footer1 {
+  background-color:black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative; /* Change from fixed to relative */
+  bottom: 0;
+}
+
+.contact {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .icon {
+  margin-right: 8px;
+}
+
+.social-icons {
+  margin-left: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #cccccc;
+}
+
+.content-info {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.links {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.copyright-info {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  font-size: 0.8rem;
+  color:#cccccc;
+}
