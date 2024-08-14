@@ -231,3 +231,14 @@ a {
   background-color: #ccc;
   color: black;
 }
+
+
+.show-password-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.show-password-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}

@@ -59,7 +59,7 @@ const View3 = () => {
         <div className="view1-container">
             <section className="content">
             <div className="banner">
-                    <h1>We're among the <br /> Top 10 Inspiring Workplaces EMEA</h1>
+                    <h1>We're among the <br /> Top 1 Inspiring Workplaces EMEA</h1>
                     <p>for outstanding work in Culture & Purpose</p>
                 </div>
                 <div className="company-info">
@@ -87,7 +87,7 @@ const View3 = () => {
                             <div className="job-info">
                                 <h3>{job.jobTitle}</h3>
                                 <p>{job.companyName}</p>
-                                <p><span>⭐ 3.4</span> (596 Reviews)</p>
+                                <p><span>⭐ 4.4</span> (986 Reviews)</p>
                                 <div className="job-meta">
                                     <span>{job.jobDuration}</span>
                                     <span>₹ {job.salary}</span>
@@ -97,7 +97,7 @@ const View3 = () => {
                                 <div className="job-tags">
                                     <span>{job.description2.split(',').join(' - ')}</span>
                                 </div>
-                                <p className="job-date">30+ Days Ago</p>
+                                <p className="job-date">3 Days Ago</p>
                             </div>
                             <div className="job-save">
                                 <img src="g1.png" alt="google Logo" className="job-logo3" />

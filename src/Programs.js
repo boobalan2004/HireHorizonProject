@@ -57,7 +57,7 @@ function Programs() {
       price: '₹ 296 for 3 Months',
       img: 'mock.avif', // replace with appropriate image
       label: 'FREE TRIAL',
-      link: '/ai-mock-interview' // replace with appropriate link
+      link: '/resumedis' // replace with appropriate link
     },
     {
       title: 'Monthly Job Search Plan',
@@ -65,7 +65,7 @@ function Programs() {
       price: '₹ 890 Per month',
       img: 'search.jpg', // replace with appropriate image
       label: 'NEW',
-      link: '/monthly-job-search' // replace with appropriate link
+      link: '/resumedis' // replace with appropriate link
     },
     {
       title: 'Resume Writing',

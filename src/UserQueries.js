@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Typography, List, ListItem, ListItemText, Divider, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 
 import './UserQueries.css';
+import logo from './job logo.png';
+
 
 const UserQueries = () => {
   const [queries, setQueries] = useState([]);
@@ -68,6 +70,10 @@ const UserQueries = () => {
   };
 
   return (
+    <div>
+    <div className="logo-container">
+                <img src={logo} alt="Logo" className="logo3" />
+            </div>
     <Container sx={{ mt: 4 }} className="userQueries-container">
       <Typography variant="h4" gutterBottom className="userQueries-title">
         User Queries
@@ -150,6 +156,7 @@ const UserQueries = () => {
         </DialogActions>
       </Dialog>
     </Container>
+    </div>
   );
 };
 

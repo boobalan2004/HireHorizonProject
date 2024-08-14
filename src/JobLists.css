@@ -6,6 +6,13 @@ body {
     padding: 20px;
 }
 
+.logo1 {
+    max-width: 140px; /* Adjust the size as needed */
+    height: auto;
+    padding-left: 670px;
+}
+
+
 .header2004 {
     display: flex;
     justify-content: flex-start;
@@ -14,7 +21,7 @@ body {
 }
 
 .header2004 p {
-    padding-left: 540px;
+    padding-left: 570px;
 }
 
 .header-button {
@@ -90,3 +97,5 @@ body {
 .view-resume-button:hover {
     background-color: #0056b3;
 }
+
+

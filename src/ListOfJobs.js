@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './ListOfJobs.css';
 import EditForm from './EditForm';
+import logo from './job logo.png';
 
 const ListOfJobs = () => {
   const [jobPosts, setJobPosts] = useState([]);
   const [editingJobId, setEditingJobId] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     fetch('http://localhost:9001/path/jobs')
@@ -42,6 +45,12 @@ const ListOfJobs = () => {
 
   return (
     <div className="jobs-container15">
+      <div className="header15">
+        <button className="back-button" onClick={() => navigate('/admin-dash')}>Back</button>
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo2" />
+        </div>
+      </div>
       <h2>Posted Job Listings</h2>
       <div className="cards-container15">
         {jobPosts.map(job => (

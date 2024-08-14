@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import StatsCard from './StatsCard';
@@ -8,16 +8,55 @@ import './DashboardContainer.css'; // CSS for the main layout
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome
 
 const DashboardContainer = () => {
+  const [jobData, setJobData] = useState([]);
+  const [jobPosts, setJobPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchJobApplications = async () => {
+      try {
+        const response = await fetch('http://localhost:9001/path/applications');
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setJobData(data);
+        } else {
+          console.error('Unexpected data format:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching job applications:', error);
+      }
+    };
+
+    const fetchJobPosts = async () => {
+      try {
+        const response = await fetch('http://localhost:9001/path/jobs');
+        const data = await response.json();
+        if (Array.isArray(data)) {
+          setJobPosts(data);
+        } else {
+          console.error('Unexpected data format:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching job posts:', error);
+      }
+    };
+
+    fetchJobApplications();
+    fetchJobPosts();
+  }, []);
+
+  const totalJobSeekers = jobData.length; // Calculate the number of job seekers
+  const totalJobsPosted = jobPosts.length; // Calculate the number of jobs posted
+
   return (
     <div className="dashboard-container">
       <Sidebar />
       <div className="main-content21">
         <Header />
         <div className="dashboard-stats">
+          <StatsCard title="Total Registered Candidates" count={totalJobSeekers} icon="fas fa-users" color="cyan" />
+          <StatsCard title="Total Listed Jobs" count={totalJobsPosted} icon="fas fa-briefcase" color="teal" /> {/* Use the calculated count */}
           <StatsCard title="Total Job Category" count={5} icon="fas fa-book" color="purple" />
           <StatsCard title="Total Registered Employer" count={3} icon="fas fa-building" color="blue" />
-          <StatsCard title="Total Registered Candidates" count={2} icon="fas fa-users" color="cyan" />
-          <StatsCard title="Total Listed Jobs" count={7} icon="fas fa-briefcase" color="teal" />
         </div>
 
         <div className="dashboard-extra-stats">

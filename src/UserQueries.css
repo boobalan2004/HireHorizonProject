@@ -1,11 +1,12 @@
 /* UserQueries.css */
 
 .userQueries-container {
-    padding: 20px;
+    padding: 0px;
   }
   
   .userQueries-title {
     margin-bottom: 20px;
+    padding-left: 460px;
   }
   
   .userQueries-list {
@@ -36,4 +37,10 @@
   .userQueries-dialogTitle {
     margin-bottom: 20px;
   }
+
   
+  .logo3 {
+    max-width: 140px; /* Adjust the size as needed */
+    height: auto;
+    padding-left: 670px;
+}

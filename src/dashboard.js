@@ -29,14 +29,37 @@ function Dashboard() {
   const handlecomRedirect = () => {
     navigate('/companies');
   };
+  const handleComRedirect = () => {
+    navigate('/view1');
+  };
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
   const handleSearchSubmit = () => {
-    if (searchQuery.trim()) {
-      navigate('/view1', { state: { query: searchQuery } });
+    const query = searchQuery.trim().toLowerCase();
+
+    if (query === 'tcs' || query === 'tata consultancy services') {
+      navigate('/view1');
+    } else if (query === 'amazon') {
+      navigate('/view2');
+    } else if (query === 'icici' || query === 'icici bank') {
+      navigate('/icici');
+    } else if (query === 'wells fargo') {
+      navigate('/wellsfargo');
+    } else if (query === 'datamatics') {
+      navigate('/datamatics');
+    } else if (query === 'actalent') {
+      navigate('/actalent');
+    } else if (query === 'airtel') {
+      navigate('/airtel');
+    } else if (query === 'capegemini') {
+      navigate('/capegemini');
+    } else if (query === 'google') {
+      navigate('/view3');
+    } else {
+      alert('Company not found. Please check the spelling or search for a different company.');
     }
   };
 
@@ -111,7 +134,7 @@ function Dashboard() {
               <h4>Tata Consultancy Services</h4>
               <p className="rating">3.8 <span>78K+ reviews</span></p>
               <p>Explore challenging and exciting opportunities at TCS</p>
-              <button className="view-jobs">View jobs</button>
+              <button className="view-jobs" onClick={handleComRedirect}>View jobs</button>
             </div>
             <div className="company-card">
               <img src={iciciLogo} alt="ICICI Bank" />

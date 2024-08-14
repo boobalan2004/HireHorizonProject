@@ -14,7 +14,9 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [resetEmail, setResetEmail] = useState('');
+  const [resetPassword, setResetPassword] = useState('');
   const [resetErrorMessage, setResetErrorMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleSignupRedirect = () => {
     navigate('/signup');
@@ -27,9 +29,9 @@ const Login = () => {
       return;
     }
     setErrorMessage('');
-  
-    const username = email.split('@')[0]; 
-  
+
+    const username = email.split('@')[0];
+
     try {
       const response = await fetch('http://localhost:9001/path/login', {
         method: 'POST',
@@ -38,14 +40,15 @@ const Login = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-  
+
       const contentType = response.headers.get('content-type');
       let data;
       if (contentType && contentType.includes('application/json')) {
         data = await response.json();
       } else {
         data = await response.text();
-      } 
+      }
+
       if (response.ok) {
         login(username, email);
         navigate('/dashboard');
@@ -68,6 +71,7 @@ const Login = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
     setResetEmail('');
+    setResetPassword('');
     setResetErrorMessage('');
   };
 
@@ -77,24 +81,29 @@ const Login = () => {
       return;
     }
 
+    if (resetPassword.length < 8) {
+      setResetErrorMessage('Password must be at least 8 characters long.');
+      return;
+    }
+
     try {
       const response = await fetch('http://localhost:9001/path/reset-password', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: resetEmail }),
+        body: JSON.stringify({ email: resetEmail, newPassword: resetPassword }),
       });
 
       if (response.ok) {
-        alert('Password reset email sent!');
+        alert('Password has been successfully reset!');
         handleModalClose();
       } else {
         const data = await response.json();
-        setResetErrorMessage(typeof data === 'string' ? data : JSON.stringify(data) || 'Error sending password reset email');
+        setResetErrorMessage(typeof data === 'string' ? data : JSON.stringify(data) || 'Error resetting password');
       }
     } catch (error) {
-      setResetErrorMessage('Error sending password reset email');
+      setResetErrorMessage('Error resetting password');
     }
   };
 
@@ -123,7 +132,7 @@ const Login = () => {
           <div className="form-group">
             <label>Password*</label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               required
               value={password}
@@ -131,6 +140,14 @@ const Login = () => {
             />
             <small>Must be at least 8 characters.</small>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
+          </div>
+          <div className="show-password-checkbox">
+            <input
+              type="checkbox"
+              checked={showPassword}
+              onChange={() => setShowPassword(!showPassword)}
+            />
+            <label>show password</label>
           </div>
           <button type="submit" className="create-account">Login</button>
           <p className="forgot-password" onClick={handleForgotPassword}>
@@ -144,28 +161,48 @@ const Login = () => {
 
       {/* Modal for password reset */}
       <Modal
-        isOpen={isModalOpen}
-        onRequestClose={handleModalClose}
-        contentLabel="Reset Password"
-        className="reset-password-modal"
-        overlayClassName="reset-password-overlay"
-        ariaHideApp={false} // Needed to avoid accessibility warnings
-      >
-        <h2>Reset Password</h2>
-        <div className="form-group">
-          <label>Email*</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            required
-            value={resetEmail}
-            onChange={(e) => setResetEmail(e.target.value)}
-          />
-          {resetErrorMessage && <p className="error-message">{resetErrorMessage}</p>}
-        </div>
-        <button onClick={handlePasswordReset} className="reset-password-button">Send Reset Email</button>
-        <button onClick={handleModalClose} className="cancel-button">Cancel</button>
-      </Modal>
+  isOpen={isModalOpen}
+  onRequestClose={handleModalClose}
+  contentLabel="Reset Password"
+  className="reset-password-modal"
+  overlayClassName="reset-password-overlay"
+  ariaHideApp={false}
+>
+  <h2>Reset Password</h2>
+  <div className="form-group">
+    <label>Email*</label>
+    <input
+      type="email"
+      placeholder="Enter your email"
+      required
+      value={resetEmail}
+      onChange={(e) => setResetEmail(e.target.value)}
+    />
+  </div>
+  <div className="form-group">
+    <label>New Password*</label>
+    <input
+      type={showPassword ? "text" : "password"}  // Updated to show/hide password
+      placeholder="Enter your new password"
+      required
+      value={resetPassword}
+      onChange={(e) => setResetPassword(e.target.value)}
+    />
+    <small>Must be at least 8 characters.</small>
+  </div>
+  <div className="show-password-checkbox">
+    <input
+      type="checkbox"
+      checked={showPassword}
+      onChange={() => setShowPassword(!showPassword)}  // Toggles password visibility
+    />
+    <label>Show Password</label>
+  </div>
+  {resetErrorMessage && <p className="error-message">{resetErrorMessage}</p>}
+  <button onClick={handlePasswordReset} className="reset-password-button">Reset Password</button>
+  <button onClick={handleModalClose} className="cancel-button">Cancel</button>
+</Modal>
+
 
       <div className="login-image"></div>
     </div>

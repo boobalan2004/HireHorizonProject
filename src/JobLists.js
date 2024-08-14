@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './JobLists.css';
-
+import logo from './job logo.png';
+import { useNavigate } from 'react-router-dom';
 const JobList = () => {
+    const navigate = useNavigate(); 
     const [jobData, setJobData] = useState([]);
-
     useEffect(() => {
         const fetchJobApplications = async () => {
             try {
@@ -35,8 +36,11 @@ const JobList = () => {
 
     return (
         <div className="container2004">
+            <div className="logo-container">
+                <img src={logo} alt="Logo" className="logo1" />
+            </div>
             <div className="header2004">
-                <button className="header-button">All applications</button>
+                <button className="header-button" onClick={() => navigate('/admin-dash')}>Back</button>
                 <p>Job Seekers Information</p>
             </div>
             <div className="job-list-container">

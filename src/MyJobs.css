@@ -68,3 +68,24 @@
     cursor: pointer;
     color: #0073b1;
 }
+
+
+.no-jobs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Adjust to fit your layout */
+    text-align: center;
+  }
+  
+  .no-jobs-image {
+    width: 200px; /* Adjust the size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .no-jobs-message {
+    font-size: 18px;
+    color: #555; /* Adjust the color as needed */
+  }
+  
